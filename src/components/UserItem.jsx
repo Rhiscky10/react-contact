@@ -9,25 +9,23 @@ import { Button, Modal } from "react-bootstrap";
 
 function UserItem(props) {
   const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState(props.details.name)
-  const [phonenumber, setPhonenumber] = useState(props.details.phonenumber)
-  const [locaction, setLocation] = useState(props.details.locaction)
-
-
+  const [name, setName] = useState(props.details.name);
+  const [phonenumber, setPhonenumber] = useState(props.details.phonenumber);
+  const [locaction, setLocation] = useState(props.details.locaction);
 
   const handleModalState = () => {
     setShowModal(!showModal);
   };
 
   const handleNameChange = (e) => {
-    setName(e.target.value)
-  }
+    setName(e.target.value);
+  };
   const handlePhonenumberChange = (e) => {
-    setPhonenumber(e.target.value)
-  }
+    setPhonenumber(e.target.value);
+  };
   const handleLocationChange = (e) => {
-    setLocation(e.target.value)
-  }
+    setLocation(e.target.value);
+  };
   return (
     <div>
       <h1>{props.details.name}</h1>
@@ -41,42 +39,42 @@ function UserItem(props) {
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
-        <Modal.Body <Form onSubmit={this.handleSubmit}>
-//           <Form.Group className="mb-3" controlId="formBasicEmail">
-//             <Form.Label>User Fullname</Form.Label>
-//             <Form.Control
-              value={this.state.name}
-              onChange={this.handleNameChange}
-              type="text"
-              placeholder="Enter your fullname"
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Phone Number</Form.Label>
-            <Form.Control
-              value={this.state.phonenumber}
-              onChange={this.handlephonenumberChange}
-              type="numbers"
-              placeholder="Enter your phone number"
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>User Location</Form.Label>
-            <Form.Control
-              value={this.state.location}
-              onChange={this.handlelocationChange}
-              type="text"
-              placeholder="Enter your current Location"
-            />
-          </Form.Group>
-
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-</Modal.Body>
+        <Modal.Body>
+          <Form onSubmit={this.handleSubmit}>
+            //{" "}
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              // <Form.Label>User Fullname</Form.Label>
+              //{" "}
+              <Form.Control
+                value={this.state.name}
+                onChange={this.handleNameChange}
+                type="text"
+                placeholder="Enter your fullname"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control
+                value={this.state.phonenumber}
+                onChange={this.handlephonenumberChange}
+                type="numbers"
+                placeholder="Enter your phone number"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>User Location</Form.Label>
+              <Form.Control
+                value={this.state.location}
+                onChange={this.handlelocationChange}
+                type="text"
+                placeholder="Enter your current Location"
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleModalState}>
             Close
